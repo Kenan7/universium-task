@@ -17,13 +17,13 @@ class Command(BaseCommand):
         data_dir = options['data_dir']
         self.stdout.write(self.style.SUCCESS(f'Importing data from {data_dir}'))
 
-        self.import_movies(os.path.join(data_dir, f'{data_dir}_movies.csv'))
-        self.import_actors(os.path.join(data_dir, f'{data_dir}_actors.csv'))
-        self.import_genres(os.path.join(data_dir, f'{data_dir}_movies_genres.csv'))
-        self.import_directors(os.path.join(data_dir, f'{data_dir}_directors.csv'))
-        self.import_director_genres(os.path.join(data_dir, f'{data_dir}_directors_genres.csv'))
-        self.import_roles(os.path.join(data_dir, f'{data_dir}_roles.csv'))
-        self.import_movie_directors(os.path.join(data_dir, f'{data_dir}_movies_directors.csv'))
+        self.import_movies(os.path.join(data_dir, 'imdb_ijs_movies.csv'))
+        self.import_actors(os.path.join(data_dir, 'imdb_ijs_actors.csv'))
+        self.import_genres(os.path.join(data_dir, 'imdb_ijs_movies_genres.csv'))
+        self.import_directors(os.path.join(data_dir, 'imdb_ijs_directors.csv'))
+        self.import_director_genres(os.path.join(data_dir, 'imdb_ijs_directors_genres.csv'))
+        self.import_roles(os.path.join(data_dir, 'imdb_ijs_roles.csv'))
+        self.import_movie_directors(os.path.join(data_dir, 'imdb_ijs_movies_directors.csv'))
 
     @transaction.atomic
     def import_movies(self, file_path):
