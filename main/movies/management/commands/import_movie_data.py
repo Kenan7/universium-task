@@ -120,6 +120,7 @@ class Command(BaseCommand):
                 Role.objects.get_or_create(
                     movie_id=row['movie_id'],
                     actor_id=row['actor_id'],
+                    role=row['role'],
                     defaults=dict(
                         movie_id=row['movie_id'],
                         actor_id=row['actor_id'],
